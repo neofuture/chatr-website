@@ -136,6 +136,13 @@ export default function RootLayout({
           {children}
           <BackToTop />
         </WebsiteProviders>
+        <script
+          src="https://api.chatr-app.online/widget/chatr.js"
+          data-accent-color="#3b82f6"
+          data-title="Chat with us"
+          data-greeting="Hi there 👋 How can we help you today?"
+          async
+        />
       </body>
     </html>
   );
