@@ -120,7 +120,10 @@ export default function SiteNav() {
       .then(data => {
         if (cancelled || !data) return;
         const img = data.profileImage;
-        if (img) setLiveProfileImage(resolveAssetUrl(img) || img);
+        if (img) {
+          const resolved = img.startsWith('/uploads/') ? API + img : (resolveAssetUrl(img) || img);
+          setLiveProfileImage(resolved);
+        }
       })
       .catch(() => {});
     return () => { cancelled = true; };

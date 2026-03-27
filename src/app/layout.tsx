@@ -137,7 +137,7 @@ export default function RootLayout({
           <BackToTop />
         </WebsiteProviders>
         <script
-          src="https://api.chatr-app.online/widget/chatr.js"
+          src={`${process.env.NEXT_PUBLIC_API_URL || 'https://api.chatr-app.online'}/widget/chatr.js`}
           data-accent-color="#3b82f6"
           data-title="Chat with us"
           data-greeting="Hi there 👋 How can we help you today?"

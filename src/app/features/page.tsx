@@ -600,6 +600,48 @@ export default function FeaturesPage() {
         </div>
       </div>
 
+      {/* ── Admin & Contact Management ────────────────────── */}
+      <div className={s.sectionAlt}>
+        <div className={s.section}>
+          <div className={s.sectionCenter}>
+            <p className={s.sectionTag}>Administration</p>
+            <h2 className={s.sectionH2}>Admin &amp; Contact Management</h2>
+            <p className={`${s.sectionP} ${s.sectionPCenter}`}>
+              A built-in admin panel for support users to review, manage, and respond to
+              widget chat contacts — no external CRM required.
+            </p>
+          </div>
+
+          <div className={s.grid2}>
+            <div className={s.card}>
+              <div className={`${s.cardIcon} ${s.iconBlue}`}><i className="fas fa-inbox" aria-hidden="true" /></div>
+              <div className={s.cardTitle}>Widget Contact Inbox</div>
+              <div className={s.cardText}>Every visitor who chats via the embeddable widget appears as a contact with name, email, message count, and first message preview.</div>
+            </div>
+            <div className={s.card}>
+              <div className={`${s.cardIcon} ${s.iconPurple}`}><i className="fas fa-comments" aria-hidden="true" /></div>
+              <div className={s.cardTitle}>Conversation History</div>
+              <div className={s.cardText}>Click any contact to view the full message thread — guest messages on the left, agent replies on the right, with timestamps.</div>
+            </div>
+            <div className={s.card}>
+              <div className={`${s.cardIcon} ${s.iconGreen}`}><i className="fas fa-columns" aria-hidden="true" /></div>
+              <div className={s.cardTitle}>Resizable Split Panel</div>
+              <div className={s.cardText}>Contact list and message viewer side by side with a drag-to-resize divider. Uses the full viewport width on desktop.</div>
+            </div>
+            <div className={s.card}>
+              <div className={`${s.cardIcon} ${s.iconOrange}`}><i className="fas fa-user-shield" aria-hidden="true" /></div>
+              <div className={s.cardTitle}>Role-Based Access</div>
+              <div className={s.cardText}>Only users with the support flag can access the admin panel. The link appears in the burger menu and all endpoints enforce the check.</div>
+            </div>
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+            <Image src={`${SS}/45-admin-contacts.png`} alt="Admin contacts" width={900} height={500}
+              className={s.screenshotWide} style={{ width: '100%', maxWidth: 900, height: 'auto' }} />
+          </div>
+        </div>
+      </div>
+
       {/* ── CTA ───────────────────────────────────────────── */}
       <div className={s.sectionAlt}>
         <div className={s.section}>
