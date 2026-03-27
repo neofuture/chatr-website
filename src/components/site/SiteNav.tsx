@@ -203,7 +203,7 @@ export default function SiteNav() {
                       <div className={s.dropdownHeader}>
                         <span className={s.dropdownName}>{user.displayName || user.username}</span>
                       </div>
-                      <a href="https://app.chatr-app.online" className={s.dropdownItem} role="menuitem" onClick={() => setDropdownOpen(false)}>
+                      <a href={process.env.NEXT_PUBLIC_APP_URL || "https://app.chatr-app.online"} className={s.dropdownItem} role="menuitem" onClick={() => setDropdownOpen(false)}>
                         <i className="fas fa-rocket" aria-hidden="true" /> Go to App
                       </a>
                       <button className={s.dropdownItem} role="menuitem" onClick={handleLogout}>
@@ -247,7 +247,7 @@ export default function SiteNav() {
           <div className={s.mobileAuthSection}>
             {user ? (
               <>
-                <a href="https://app.chatr-app.online" className={s.mobileCta} onClick={() => setOpen(false)}>
+                <a href={process.env.NEXT_PUBLIC_APP_URL || "https://app.chatr-app.online"} className={s.mobileCta} onClick={() => setOpen(false)}>
                   <i className="fas fa-rocket" aria-hidden="true" /> Go to App
                 </a>
                 <button className={s.mobileLogout} onClick={() => { handleLogout(); setOpen(false); }}>

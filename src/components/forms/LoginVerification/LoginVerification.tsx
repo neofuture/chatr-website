@@ -2,7 +2,6 @@ import { saveAuthToken } from '@/lib/authUtils';
 import styles from './LoginVerification.module.css';
 
 import { useState, useEffect, useCallback, FormEvent, useRef, KeyboardEvent } from 'react';
-import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { useToast } from '@/contexts/ToastContext';
 import { getApiBase } from '@/lib/api';
@@ -19,7 +18,6 @@ interface LoginVerificationProps {
 }
 
 export function LoginVerificationContent({ userId, email, password }: LoginVerificationProps) {
-  const router = useRouter();
   const { showToast } = useToast();
   const [code, setCode] = useState(['', '', '', '', '', '']);
   const [loading, setLoading] = useState(false);
@@ -135,7 +133,7 @@ export function LoginVerificationContent({ userId, email, password }: LoginVerif
 
       // Redirect to app
       setTimeout(() => {
-        router.push('/app');
+        window.location.href = (process.env.NEXT_PUBLIC_APP_URL || 'https://app.chatr-app.online') + '/app';
       }, 500);
     } catch (err: any) {
       showToast(err.message || 'Verification failed', 'error');

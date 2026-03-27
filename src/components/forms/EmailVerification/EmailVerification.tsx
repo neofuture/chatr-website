@@ -226,7 +226,7 @@ export function EmailVerificationContent({ userId, email, verificationCode, veri
       // Close panels then redirect to app
       closeAllPanels();
       setTimeout(() => {
-        router.push('/app');
+        window.location.href = (process.env.NEXT_PUBLIC_APP_URL || 'https://app.chatr-app.online') + '/app';
       }, 300);
     } catch (err: any) {
       showToast(err.message || 'Verification failed', 'error');

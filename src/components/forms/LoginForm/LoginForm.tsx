@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
-import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { usePanels } from '@/contexts/PanelContext';
 import { useToast } from '@/contexts/ToastContext';
@@ -13,7 +12,6 @@ const API = getApiBase();
 const PRODUCT_NAME = process.env.NEXT_PUBLIC_PRODUCT_NAME || 'Chatr';
 
 export function LoginFormContent() {
-  const router = useRouter();
   const { openPanel, closeTopPanel } = usePanels();
   const { showToast } = useToast();
   const [email, setEmail] = useState('');
@@ -74,7 +72,7 @@ export function LoginFormContent() {
       showToast('Login successful!', 'success', 2000);
 
       setTimeout(() => {
-        router.push('/app');
+        window.location.href = (process.env.NEXT_PUBLIC_APP_URL || 'https://app.chatr-app.online') + '/app';
       }, 500);
     } catch (err: any) {
       showToast(err.message || 'Login failed', 'error');

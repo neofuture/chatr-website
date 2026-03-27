@@ -20,7 +20,7 @@ export default function BurgerMenu({ isDark }: BurgerMenuProps) {
 
   const handleOpenSettings = () => {
     setIsOpen(false);
-    router.push('/app/settings');
+    window.location.href = (process.env.NEXT_PUBLIC_APP_URL || 'https://app.chatr-app.online') + '/app/settings';
   };
 
   const bgColor = isDark ? '#1e293b' : '#f8fafc';
