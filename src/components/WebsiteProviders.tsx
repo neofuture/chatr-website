@@ -2,12 +2,10 @@
 
 import { useEffect, type ReactNode } from 'react';
 import { ThemeProvider } from '@/contexts/ThemeContext';
-import { LogProvider } from '@/contexts/LogContext';
-import { UserSettingsProvider } from '@/contexts/UserSettingsContext';
 import { ToastProvider } from '@/contexts/ToastContext';
 import { PanelProvider } from '@/contexts/PanelContext';
 import { ConfirmationProvider } from '@/contexts/ConfirmationContext';
-import PanelContainer from '@/components/panels/PanelContainer/PanelContainer';
+import WebsitePanelContainer from '@/components/panels/PanelContainer/WebsitePanelContainer';
 import ToastContainer from '@/components/ToastContainer/ToastContainer';
 import ConfirmationDialog from '@/components/dialogs/ConfirmationDialog/ConfirmationDialog';
 
@@ -24,20 +22,16 @@ export default function WebsiteProviders({ children }: { children: ReactNode }) 
 
   return (
     <ThemeProvider>
-      <LogProvider>
-      <UserSettingsProvider>
-        <ToastProvider>
-          <PanelProvider>
-            <ConfirmationProvider>
-              {children}
-              <PanelContainer />
-              <ToastContainer />
-              <ConfirmationDialog />
-            </ConfirmationProvider>
-          </PanelProvider>
-        </ToastProvider>
-      </UserSettingsProvider>
-      </LogProvider>
+      <ToastProvider>
+        <PanelProvider>
+          <ConfirmationProvider>
+            {children}
+            <WebsitePanelContainer />
+            <ToastContainer />
+            <ConfirmationDialog />
+          </ConfirmationProvider>
+        </PanelProvider>
+      </ToastProvider>
     </ThemeProvider>
   );
 }
