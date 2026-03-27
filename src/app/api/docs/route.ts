@@ -2,7 +2,14 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-const DOCS_PATH = path.join(process.cwd(), '..', 'Documentation');
+const DOCS_PATH = (() => {
+  const candidates = [
+    path.join(process.cwd(), '..', 'Documentation'),
+    path.join(process.cwd(), '..', 'chatr', 'Documentation'),
+    path.join(process.cwd(), 'Documentation'),
+  ];
+  return candidates.find(p => fs.existsSync(p)) || candidates[0];
+})();
 
 // Helper to read directory structure recursively
 function readDirStructure(dirPath: string, basePath: string = ''): any {
