@@ -414,7 +414,7 @@ socket.on("user:typing", ({ userId }) => {
           </div>
 
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
-            <a href="/storybook" target="_blank" rel="noopener noreferrer" className={s.btnSecondary}>
+            <a href={(process.env.NEXT_PUBLIC_APP_URL || 'https://app.chatr-app.online') + '/storybook'} target="_blank" rel="noopener noreferrer" className={s.btnSecondary}>
               <i className="fas fa-book-open" aria-hidden="true" /> Open Storybook
             </a>
           </div>

@@ -236,9 +236,9 @@ export default function ProductPage() {
               style={{ width: '100%', height: 'auto' }} priority />
           </div>
           <div className={s.ctaRow}>
-            <Link href="/app" className={`${s.ctaLink} ${s.ctaPrimary}`}>
+            <a href={process.env.NEXT_PUBLIC_APP_URL || 'https://app.chatr-app.online'} className={`${s.ctaLink} ${s.ctaPrimary}`}>
               <i className="fas fa-comments" aria-hidden="true" /> Open App
-            </Link>
+            </a>
             <Link href="/docs" className={`${s.ctaLink} ${s.ctaSecondary}`}>
               <i className="fas fa-book" aria-hidden="true" /> Documentation
             </Link>

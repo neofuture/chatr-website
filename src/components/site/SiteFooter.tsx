@@ -29,8 +29,8 @@ export default function SiteFooter() {
           <Link href="/technology">Architecture</Link>
           <Link href="/docs">Documentation</Link>
           <a href="/dashboard" target="_blank" rel="noopener noreferrer">Dashboard</a>
-          <a href="/storybook" target="_blank" rel="noopener noreferrer">Storybook</a>
-          <a href="/demo" target="_blank" rel="noopener noreferrer">Component Demos</a>
+          <a href={(process.env.NEXT_PUBLIC_APP_URL || 'https://app.chatr-app.online') + '/storybook'} target="_blank" rel="noopener noreferrer">Storybook</a>
+          <a href={(process.env.NEXT_PUBLIC_APP_URL || 'https://app.chatr-app.online') + '/demo'} target="_blank" rel="noopener noreferrer">Component Demos</a>
         </div>
 
         <div className={s.col}>
@@ -38,7 +38,7 @@ export default function SiteFooter() {
           <a href="https://github.com/neofuture/chatr" target="_blank" rel="noopener noreferrer"><i className="fab fa-github" aria-hidden="true" style={{ marginRight: 6 }} />GitHub</a>
           <Link href="/contact">Paid Support</Link>
           <Link href="/contact">Contact</Link>
-          <Link href="/app">Open App</Link>
+          <a href={process.env.NEXT_PUBLIC_APP_URL || 'https://app.chatr-app.online'}>Open App</a>
           <button onClick={openRegister} className={s.footerBtn}>Create Account</button>
         </div>
       </div>

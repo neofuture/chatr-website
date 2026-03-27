@@ -7,8 +7,7 @@ export function getApiBase(): string {
   if (typeof window !== 'undefined') {
     const env = process.env.NEXT_PUBLIC_API_URL;
     if (env && !env.includes('localhost')) return env;
-    // HTTPS uses port 3002, HTTP uses port 3001
-    const port = window.location.protocol === 'https:' ? 3002 : 3001;
+    const port = 3001;
     return `${window.location.protocol}//${window.location.hostname}:${port}`;
   }
   return process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';

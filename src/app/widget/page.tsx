@@ -34,9 +34,9 @@ export default function WidgetPage() {
             <a href="https://github.com/neofuture/chatr" target="_blank" rel="noopener noreferrer" className={s.btnPrimary}>
               <i className="fab fa-github" aria-hidden="true" /> View on GitHub
             </a>
-            <Link href="/widget-demo" className={s.btnSecondary}>
+            <a href={(process.env.NEXT_PUBLIC_APP_URL || "https://app.chatr-app.online") + "/widget-demo"} className={s.btnSecondary}>
               <i className="fas fa-play-circle" aria-hidden="true" /> Live Demo
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -514,9 +514,9 @@ window.ChatrWidget.setGreeting(
               product overview for architecture details, screenshots, and commercial analysis.
             </p>
             <div className={s.heroCtas}>
-              <Link href="/widget-demo" className={s.btnPrimary}>
+              <a href={(process.env.NEXT_PUBLIC_APP_URL || "https://app.chatr-app.online") + "/widget-demo"} className={s.btnPrimary}>
                 <i className="fas fa-play-circle" aria-hidden="true" /> Live Widget Demo
-              </Link>
+              </a>
               <a href="https://github.com/neofuture/chatr" target="_blank" rel="noopener noreferrer" className={s.btnPrimary}>
                 <i className="fab fa-github" aria-hidden="true" /> View on GitHub
               </a>
