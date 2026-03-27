@@ -205,7 +205,7 @@ export default function SiteNav() {
                       </div>
                       <a href="https://app.chatr-app.online" className={s.dropdownItem} role="menuitem" onClick={() => setDropdownOpen(false)}>
                         <i className="fas fa-rocket" aria-hidden="true" /> Go to App
-                      </Link>
+                      </a>
                       <button className={s.dropdownItem} role="menuitem" onClick={handleLogout}>
                         <i className="fas fa-sign-out-alt" aria-hidden="true" /> Logout
                       </button>
