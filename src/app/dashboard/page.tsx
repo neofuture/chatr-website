@@ -2097,16 +2097,6 @@ export default function DashboardPage() {
         );
         break;
       case 'e2e':
-        if (!isLocalhost) {
-          content = (
-            <div style={{ textAlign: 'center', padding: '3rem 2rem', color: 'var(--text-secondary)' }}>
-              <i className="fad fa-browser" style={{ fontSize: '2rem', display: 'block', marginBottom: 12, opacity: 0.4 }} />
-              <p style={{ fontSize: '0.9rem', fontWeight: 600, marginBottom: 4 }}>E2E tests are only available in local development</p>
-              <p style={{ fontSize: '0.8rem', opacity: 0.7 }}>Playwright requires a browser runtime that is not installed on the production server.</p>
-            </div>
-          );
-          break;
-        }
         content = (
           <>
           {/* ── E2E Test Results ────────────────────────────────────── */}
@@ -2166,13 +2156,13 @@ export default function DashboardPage() {
               <h2 style={{ ...H2, margin: 0 }}><Ico>fad fa-browser</Ico> E2E Tests (Playwright)</h2>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                 {hasData && <FilterPills options={e2eFilterOptions} value={activeFilter} onChange={setE2eFilter} />}
-                {failedCount > 0 && !e2eRunning && (
+                {isLocalhost && failedCount > 0 && !e2eRunning && (
                   <button onClick={() => startE2E(true)}
                     style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', borderRadius: 6, padding: '3px 10px', cursor: 'pointer', fontSize: '0.75rem', color: '#ef4444' }}>
                     <i className="fas fa-redo" style={{ marginRight: 4 }} /> Re-run Failed
                   </button>
                 )}
-                {e2eRunning ? (
+                {isLocalhost && (e2eRunning ? (
                   <button onClick={stopE2E}
                     style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', borderRadius: 6, padding: '3px 10px', cursor: 'pointer', fontSize: '0.75rem', color: '#ef4444' }}>
                     <i className="fas fa-stop" style={{ marginRight: 4 }} /> Stop
@@ -2182,14 +2172,16 @@ export default function DashboardPage() {
                     style={{ background: 'rgba(168,85,247,0.1)', border: '1px solid rgba(168,85,247,0.3)', borderRadius: 6, padding: '3px 10px', cursor: 'pointer', fontSize: '0.75rem', color: '#a855f7' }}>
                     <i className="fas fa-play" style={{ marginRight: 4 }} /> Run E2E
                   </button>
-                )}
+                ))}
               </div>
             </div>
 
             {!e2eReport && !e2eRunning && !e2eLive && (
               <div style={{ textAlign: 'center', padding: '2rem', color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
                 <i className="fad fa-browser" style={{ fontSize: '1.5rem', display: 'block', marginBottom: 8, opacity: 0.4 }} />
-                No E2E results yet. Click <strong>Run E2E</strong> to execute all Playwright tests.
+                {isLocalhost
+                  ? <>No E2E results yet. Click <strong>Run E2E</strong> to execute all Playwright tests.</>
+                  : <>No E2E results available. Results are synced from the latest local test run.</>}
               </div>
             )}
 
@@ -2621,7 +2613,7 @@ export default function DashboardPage() {
             {/* ─ Testing ─ */}
             <TestStatCard label="Test Results — Frontend" icon="fad fa-flask" color="#10b981" panel="tests" onOpen={openPanel} report={feReport} running={feRunning} coverage={feReport?.coverage} />
             <TestStatCard label="Test Results — Backend" icon="fad fa-vial" color="#3b82f6" panel="tests" onOpen={openPanel} report={beReport} running={beRunning} coverage={beReport?.coverage} />
-            {isLocalhost && <TestStatCard label="E2E Tests (Playwright)" icon="fad fa-browser" color="#a855f7" panel="e2e" onOpen={openPanel} report={e2eReport} running={e2eRunning} />}
+            <TestStatCard label="E2E Tests (Playwright)" icon="fad fa-browser" color="#a855f7" panel="e2e" onOpen={openPanel} report={e2eReport} running={e2eRunning} />
 
             {/* ─ Code Health ─ */}
             <SummaryCard label="Code Health" value={`${data.health.avgFileSize} avg loc`} icon="fad fa-heartbeat" color="#f43f5e" panel="health" onOpen={openPanel}

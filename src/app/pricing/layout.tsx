@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://chatr.emberlyn.co.uk';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://chatr-app.online';
 
 export const metadata: Metadata = {
   title: 'Pricing & Support — Free Code, Expert Help from £15/hr',

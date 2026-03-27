@@ -12,10 +12,11 @@ interface PanelProps {
   effectiveMaxLevel: number;
   isClosing?: boolean;
   titlePosition?: 'center' | 'left' | 'right';
+  fullWidth?: boolean;
   actionIcons?: ActionIcon[];
 }
 
-function Panel({ id, title, children, level, effectiveMaxLevel, isClosing, titlePosition = 'center', actionIcons }: PanelProps) {
+function Panel({ id, title, children, level, effectiveMaxLevel, isClosing, titlePosition = 'center', fullWidth = false, actionIcons }: PanelProps) {
   const { closePanel } = usePanels();
   const [isAnimating, setIsAnimating] = useState(false);
   const isCovered = level < effectiveMaxLevel;
@@ -43,11 +44,17 @@ function Panel({ id, title, children, level, effectiveMaxLevel, isClosing, title
       />
       <div
         className="auth-panel"
+        data-fullwidth={fullWidth ? 'true' : undefined}
         style={{
           zIndex,
           transform,
           transformOrigin: 'center right',
           transition: 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          ...(fullWidth && {
+            width: '100vw',
+            maxWidth: '100vw',
+            left: 0,
+          }),
         }}
       >
         <div className="auth-panel-header">
@@ -88,6 +95,7 @@ export default function WebsitePanelContainer() {
           effectiveMaxLevel={effectiveMaxLevel}
           isClosing={panel.isClosing}
           titlePosition={panel.titlePosition}
+          fullWidth={panel.fullWidth}
           actionIcons={panel.actionIcons}
         >
           {panel.component}
