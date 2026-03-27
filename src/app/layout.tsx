@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     default: `${PRODUCT_NAME} — Real-Time Messaging Platform`,
     template: `%s | ${PRODUCT_NAME}`,
   },
-  description: 'A free, open source real-time messaging platform with voice notes, video, file sharing, AI assistant, typing indicators, read receipts, and an embeddable support widget. 50+ features, 2,800+ tests, MIT-licensed.',
+  description: 'A free, open source real-time messaging platform with voice notes, video, file sharing, AI assistant, typing indicators, read receipts, and an embeddable support widget. 50+ features, 3,000+ tests, MIT-licensed.',
   keywords: [
     'real-time chat', 'messaging platform', 'live chat widget', 'customer support chat',
     'embeddable chat', 'WebSocket messaging', 'AI chatbot', 'typing indicators',
@@ -93,7 +93,7 @@ const jsonLd = [
     '@type': 'WebSite',
     name: PRODUCT_NAME,
     url: SITE_URL,
-    description: 'A free, open source real-time messaging platform with 50+ features, 2,800+ automated tests. MIT-licensed.',
+    description: 'A free, open source real-time messaging platform with 50+ features, 3,000+ automated tests. MIT-licensed.',
     publisher: { '@type': 'Organization', name: PRODUCT_NAME, logo: { '@type': 'ImageObject', url: `${SITE_URL}/images/logo-horizontal.png` } },
   },
 ];

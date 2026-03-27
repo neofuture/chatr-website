@@ -200,7 +200,7 @@ export default function ContactPage() {
               <div className={s.cardTitle}>Acquisition &amp; Licensing</div>
               <div className={s.cardText}>
                 Interested in acquiring the IP, licensing the platform, or a commercial partnership?
-                Let&rsquo;s talk numbers. Production-ready code, 2,800+ tests, full documentation.
+                Let&rsquo;s talk numbers. Production-ready code, 3,000+ tests, full documentation.
               </div>
             </div>
             <div className={s.card}>

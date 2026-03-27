@@ -569,7 +569,7 @@ export default function FeaturesPage() {
             <div className={s.card}>
               <div className={`${s.cardIcon} ${s.iconGreen}`}><i className="fas fa-vial" aria-hidden="true" /></div>
               <div className={s.cardTitle}>Embedded Test Runner</div>
-              <div className={s.cardText}>Run all 2,800+ tests directly from the dashboard. Live streaming results with pass/fail counts and timing.</div>
+              <div className={s.cardText}>Run all 3,000+ tests directly from the dashboard. Live streaming results with pass/fail counts and timing.</div>
             </div>
             <div className={s.card}>
               <div className={`${s.cardIcon} ${s.iconOrange}`}><i className="fas fa-shield-alt" aria-hidden="true" /></div>

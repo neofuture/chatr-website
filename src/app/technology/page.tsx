@@ -175,7 +175,7 @@ export default function TechnologyPage() {
             {[
               { icon: 'fa-terminal', color: s.iconBlue, title: 'One Command Setup', text: 'Run bash dev.sh — Docker spins up PostgreSQL and Redis, migrations run, all five servers start with hot reload. Ready in under 60 seconds.' },
               { icon: 'fa-shield-alt', color: s.iconPurple, title: 'TypeScript Strict Mode', text: 'Every file — frontend, backend, and widget — is strict TypeScript. No implicit any, full type inference, and Prisma-generated types for the database.' },
-              { icon: 'fa-vial', color: s.iconGreen, title: 'Three-Tier Testing', text: '2,800+ tests across Jest (unit/integration) and Playwright (E2E). 99% frontend coverage. Tests run in parallel and complete in under 30 seconds.' },
+              { icon: 'fa-vial', color: s.iconGreen, title: 'Three-Tier Testing', text: '3,000+ tests across Jest (unit/integration) and Playwright (E2E). 99% frontend coverage. Tests run in parallel and complete in under 30 seconds.' },
               { icon: 'fa-sync', color: s.iconOrange, title: 'Hot Reload Everything', text: 'Frontend (Next.js Fast Refresh), backend (nodemon), and widget (esbuild watcher) — all live-reload on save. No manual restarts.' },
               { icon: 'fa-code-branch', color: s.iconRed, title: 'Git Hooks & CI', text: 'Husky pre-commit runs all tests. Post-commit auto-increments version and updates the changelog. Every commit is validated before it lands.' },
               { icon: 'fa-book-open', color: s.iconSlate, title: 'Storybook', text: '69 component stories with dark and light theme variants. Visual documentation for every UI component, tested in isolation.' },
@@ -324,12 +324,12 @@ socket.on("user:typing", ({ userId }) => {
           <div className={`${s.sectionTag} ${s.sectionCenter}`}>Testing</div>
           <h2 className={`${s.sectionH2} ${s.sectionCenter}`}>Quality Assurance</h2>
           <p className={`${s.sectionP} ${s.sectionPCenter} ${s.sectionCenter}`}>
-            Over 2,800 automated tests across three tiers — every component, endpoint, and user flow is covered.
+            Over 3,000 automated tests across three tiers — every component, endpoint, and user flow is covered.
           </p>
 
           <div className={s.statsRow}>
             <div className={s.statBox}>
-              <div className={s.statVal}>2,800+</div>
+              <div className={s.statVal}>3,000+</div>
               <div className={s.statLbl}>Total Tests</div>
             </div>
             <div className={s.statBox}>

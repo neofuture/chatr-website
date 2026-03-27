@@ -66,7 +66,7 @@ export default function HomePage() {
       <div className={s.sectionAlt}>
         <div className={s.section}>
           <div className={s.statsRow}>
-            {[['100%', 'Open Source'], ['50+', 'Features'], ['2,800+', 'Automated Tests'], ['82,000+', 'Lines of Code']].map(([v, l]) => (
+            {[['100%', 'Open Source'], ['50+', 'Features'], ['3,000+', 'Automated Tests'], ['120,000+', 'Lines of Code']].map(([v, l]) => (
               <div key={l} className={s.statBox}>
                 <div className={s.statVal}>{v}</div>
                 <div className={s.statLbl}>{l}</div>
@@ -209,7 +209,7 @@ export default function HomePage() {
               { icon: 'fa-seedling', color: s.iconGreen, title: 'Startups & MVPs', text: 'Skip 6 months of development. Clone the repo, customise, and launch with 50+ features on day one. Focus your team on what makes you unique.' },
               { icon: 'fa-palette', color: s.iconOrange, title: 'Agencies & Freelancers', text: 'Offer live chat as a white-label service to your clients. Deploy unique instances per client with custom branding and domains.' },
               { icon: 'fa-graduation-cap', color: s.iconRed, title: 'Education & Learning', text: 'A complete full-stack reference implementation. TypeScript, React 19, Node.js, PostgreSQL, Redis, WebSockets, AI — all production-grade.' },
-              { icon: 'fa-briefcase', color: s.iconSlate, title: 'Acquirers & Investors', text: 'A tested, documented, deployed product with 82,000+ lines of code and 2,800+ tests. Ready to integrate, resell, or build upon.' },
+              { icon: 'fa-briefcase', color: s.iconSlate, title: 'Acquirers & Investors', text: 'A tested, documented, deployed product with 120,000+ lines of code and 3,000+ tests. Ready to integrate, resell, or build upon.' },
             ].map(f => (
               <div key={f.title} className={s.card}>
                 <div className={`${s.cardIcon} ${f.color}`}>
@@ -541,7 +541,7 @@ export default function HomePage() {
 
           <div className={s.bigQuote}>
             A complete, production-deployed messaging platform — with real-time WebSockets, AI integration,
-            enterprise auth, an embeddable widget, and 2,800+ automated tests — designed, built, tested,
+            enterprise auth, an embeddable widget, and 3,000+ automated tests — designed, built, tested,
             documented, and deployed by a single developer in 30 days.
             <div className={s.bigQuoteAttr}>— The kind of output that demonstrates what focused, senior-level engineering looks like.</div>
           </div>
@@ -550,14 +550,14 @@ export default function HomePage() {
             <div className={s.metricBadge}>
               <i className="fas fa-code" aria-hidden="true" />
               <div className={s.metricBadgeText}>
-                <span className={s.metricBadgeVal}>82,000+</span>
+                <span className={s.metricBadgeVal}>120,000+</span>
                 <span className={s.metricBadgeLbl}>Lines of Code</span>
               </div>
             </div>
             <div className={s.metricBadge}>
               <i className="fas fa-vial" aria-hidden="true" />
               <div className={s.metricBadgeText}>
-                <span className={s.metricBadgeVal}>2,800+</span>
+                <span className={s.metricBadgeVal}>3,000+</span>
                 <span className={s.metricBadgeLbl}>Automated Tests</span>
               </div>
             </div>
@@ -645,7 +645,7 @@ export default function HomePage() {
           <div className={s.sectionCenter}>
             <h2 className={s.sectionH2}>Ready to get started?</h2>
             <p className={`${s.sectionP} ${s.sectionPCenter}`}>
-              50+ features, 2,800+ tests, MIT-licensed. Clone the repo and deploy for free — or get
+              50+ features, 3,000+ tests, MIT-licensed. Clone the repo and deploy for free — or get
               expert help from £15/hour.
             </p>
             <div className={s.heroCtas} style={{ marginTop: '1.5rem' }}>
