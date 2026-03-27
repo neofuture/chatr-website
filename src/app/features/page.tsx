@@ -635,9 +635,11 @@ export default function FeaturesPage() {
             </div>
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <Image src={`${SS}/45-admin-contacts.png`} alt="Admin contacts" width={900} height={500}
-              className={s.screenshotWide} style={{ width: '100%', maxWidth: 900, height: 'auto' }} />
+          <div style={{ display: 'flex', gap: '1.5rem', marginTop: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Image src={`${SS}/44-admin-empty.png`} alt="Admin contacts list" width={600} height={450}
+              className={s.screenshotWide} style={{ width: '100%', maxWidth: 560, height: 'auto', borderRadius: 12 }} />
+            <Image src={`${SS}/45-admin-contacts.png`} alt="Admin conversation view" width={600} height={450}
+              className={s.screenshotWide} style={{ width: '100%', maxWidth: 560, height: 'auto', borderRadius: 12 }} />
           </div>
         </div>
       </div>
