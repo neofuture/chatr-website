@@ -305,6 +305,7 @@
 .imgSingle img {
   max-width: 320px;
   width: 100%;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 20px var(--overlay-black-10);
   border: 1px solid var(--border-primary);
@@ -312,6 +313,7 @@
 
 .imgWide img {
   max-width: 100%;
+  height: auto;
 }
 
 .imgCaption {
@@ -334,6 +336,7 @@
 
 .imgPairItem img {
   max-width: 100%;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 20px var(--overlay-black-10);
   border: 1px solid var(--border-primary);

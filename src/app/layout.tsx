@@ -4,6 +4,7 @@ import './globals.css';
 import * as versionModule from '@/version';
 import WebsiteProviders from '@/components/WebsiteProviders';
 import BackToTop from '@/components/BackToTop/BackToTop';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -136,12 +137,12 @@ export default function RootLayout({
           {children}
           <BackToTop />
         </WebsiteProviders>
-        <script
+        <Script
           src={`${process.env.NEXT_PUBLIC_API_URL || 'https://api.chatr-app.online'}/widget/chatr.js`}
           data-accent-color="#3b82f6"
           data-title="Chat with us"
           data-greeting="Hi there 👋 How can we help you today?"
-          async
+          strategy="afterInteractive"
         />
       </body>
     </html>

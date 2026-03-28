@@ -755,6 +755,6 @@
   .comparisonTable thead th, .comparisonTable tbody td { padding: 0.6rem 0.75rem; }
   .metricStrip { gap: 1rem; }
   .metricBadge { padding: 0.75rem 1rem; }
-  .screenshotMobile { width: 160px; }
+  .screenshotMobile { width: 160px; height: auto; }
   .contactGrid { grid-template-columns: 1fr; }
 }
