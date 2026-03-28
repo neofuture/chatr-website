@@ -633,6 +633,16 @@ export default function FeaturesPage() {
               <div className={s.cardTitle}>Role-Based Access</div>
               <div className={s.cardText}>Only users with the support flag can access the admin panel. The link appears in the burger menu and all endpoints enforce the check.</div>
             </div>
+            <div className={s.card}>
+              <div className={`${s.cardIcon} ${s.iconRed}`}><i className="fas fa-reply" aria-hidden="true" /></div>
+              <div className={s.cardTitle}>Reply to Visitors</div>
+              <div className={s.cardText}>Agents reply to widget guests directly from the admin panel. Messages arrive in the visitor's widget in real time via WebSocket.</div>
+            </div>
+            <div className={s.card}>
+              <div className={`${s.cardIcon} ${s.iconSlate}`}><i className="fas fa-map-marker-alt" aria-hidden="true" /></div>
+              <div className={s.cardTitle}>Visitor Context</div>
+              <div className={s.cardText}>See the page URL, referrer, browser, screen size, timezone, and language for every visitor automatically captured by the widget.</div>
+            </div>
           </div>
 
           <div style={{ display: 'flex', gap: '1.5rem', marginTop: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>

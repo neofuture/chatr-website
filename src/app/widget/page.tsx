@@ -316,6 +316,33 @@ export default function WidgetPage() {
         </div>
       </div>
 
+      <div className={s.section}>
+        <div className={s.sectionCenter}>
+          <p className={s.sectionTag}>Business Tools</p>
+          <h2 className={s.sectionH2}>Built for Customer Support Teams</h2>
+          <p className={`${s.sectionP} ${s.sectionPCenter}`}>
+            Three features that turn a chat widget into a complete customer support tool.
+          </p>
+        </div>
+        <div className={s.grid3}>
+          <div className={s.card}>
+            <div className={`${s.cardIcon} ${s.iconGreen}`}><i className="fas fa-reply" aria-hidden="true" /></div>
+            <div className={s.cardTitle}>Reply from Your Inbox</div>
+            <div className={s.cardText}>Agents reply to widget visitors directly from the admin panel. Messages arrive in real time.</div>
+          </div>
+          <div className={s.card}>
+            <div className={`${s.cardIcon} ${s.iconBlue}`}><i className="fas fa-map-marker-alt" aria-hidden="true" /></div>
+            <div className={s.cardTitle}>Visitor Context</div>
+            <div className={s.cardText}>See the page URL, referrer, browser, screen size, timezone, and language for every visitor.</div>
+          </div>
+          <div className={s.card}>
+            <div className={`${s.cardIcon} ${s.iconOrange}`}><i className="fas fa-envelope-open-text" aria-hidden="true" /></div>
+            <div className={s.cardTitle}>Offline Message Form</div>
+            <div className={s.cardText}>When no agent is online, the widget shows a contact form. Messages are stored for later reply.</div>
+          </div>
+        </div>
+      </div>
+
       {/* ── Technical Details ─────────────────────────────── */}
       <div className={s.section}>
         <div className={s.sectionCenter}>
