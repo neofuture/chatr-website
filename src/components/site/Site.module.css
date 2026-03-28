@@ -230,6 +230,7 @@
 
 .screenshotMobile {
   width: 200px;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 8px 32px var(--overlay-black-15);
   border: 1px solid var(--border-primary);
@@ -237,6 +238,7 @@
 
 .screenshotWide {
   width: 100%;
+  height: auto;
   max-width: 800px;
   border-radius: 12px;
   box-shadow: 0 8px 32px var(--overlay-black-15);
